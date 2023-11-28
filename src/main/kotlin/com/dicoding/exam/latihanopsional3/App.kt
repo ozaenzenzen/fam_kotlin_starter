@@ -30,7 +30,9 @@ package com.dicoding.exam.latihanopsional3
  */
 
 fun manipulateString(str: String, int: Int): String {
-    return ""
+    val letters = str.filter { it.isLetter() }
+    val numbers = str.filter { it.isDigit() }
+    return "$letters${(if (numbers.isNotEmpty()) (numbers.toInt() * int) else int)}"
 }
 
 fun main() {

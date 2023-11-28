@@ -28,7 +28,8 @@ package com.dicoding.exam.latihanopsional2
  */
 
 fun minAndMax(number: Int): Int {
-    return 0
+    var list = number.toString().map { it.digitToInt()  }.toList()
+    return (list.min() + list.max())
 }
 
 fun main() {
